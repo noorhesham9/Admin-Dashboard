@@ -32,13 +32,14 @@ const Form = () => {
   };
 
   return (
-    <Box m={"20px"}>
+    <Box minHeight={"730px"} minWidth={"992px"} m={"20px"}>
       <Header title={"CREATE USER"} subtitle={"Create a New User Profile"} />
 
       <Formik
         validationSchema={userSchema}
         onSubmit={handeleSubmit}
-        initialValues={initialValues}>
+        initialValues={initialValues}
+      >
         {({
           values,
           errors,
@@ -55,7 +56,8 @@ const Form = () => {
                 gridTemplateColumns={"repeat(4,minmax(0 , 1fr)"}
                 sx={{
                   "& >div": { gridColumn: isNonMobile ? undefined : "span 4" },
-                }}>
+                }}
+              >
                 <TextField
                   fullWidth
                   variant="filled"

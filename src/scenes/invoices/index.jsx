@@ -41,7 +41,7 @@ const Invoices = () => {
     },
   ];
   return (
-    <Box>
+    <Box minHeight={"730px"} minWidth={"992px"}>
       <Header title={"INVOICES"} subtitle={"List of Invoice Balances"} />
       <Box
         m={"40px 0 0 0"}
@@ -70,11 +70,13 @@ const Invoices = () => {
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
           },
-        }}>
+        }}
+      >
         <DataGrid
           checkboxSelection
           rows={mockDataInvoices}
-          columns={columns}></DataGrid>
+          columns={columns}
+        ></DataGrid>
       </Box>
     </Box>
   );

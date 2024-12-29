@@ -37,7 +37,7 @@ const Contacts = () => {
     { field: "zipCode", headerName: "ZipCode", flex: 1 },
   ];
   return (
-    <Box>
+    <Box minHeight={"730px"} minWidth={"992px"}>
       <Header
         title={"CONTACTS"}
         subtitle={" List of Contacts for Future Refrence "}
@@ -69,13 +69,15 @@ const Contacts = () => {
           "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
             color: `${colors.gray[100]} !important`,
           },
-        }}>
+        }}
+      >
         <DataGrid
           slots={{
             toolbar: GridToolbar,
           }}
           rows={mockDataContacts}
-          columns={columns}></DataGrid>
+          columns={columns}
+        ></DataGrid>
       </Box>
     </Box>
   );

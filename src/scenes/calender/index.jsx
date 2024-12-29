@@ -53,14 +53,15 @@ const Callender = () => {
     }
   };
   return (
-    <Box m={"20px"}>
+    <Box minHeight={"730px"} minWidth={"992px"} m={"20px"}>
       <Header title={"CALENDAR"} subtitle={"Full calendar interative Page"} />
       <Box display={"flex"} justifyContent={"space-between"}>
         <Box
           flex={"1 1 20%"}
           backgroundColor={colors.primary[400]}
           p={"15px"}
-          borderRadius={"4px"}>
+          borderRadius={"4px"}
+        >
           <Typography variant="h5"> Events</Typography>
           <List>
             {currentEvents.map((event) => {
@@ -71,7 +72,8 @@ const Callender = () => {
                     backgroundColor: colors.greenAccent[500],
                     margin: "10px 0",
                     borderRadius: "2px",
-                  }}>
+                  }}
+                >
                   <ListItemText
                     primary={event.title}
                     secondary={
@@ -82,7 +84,8 @@ const Callender = () => {
                           day: "numeric",
                         })}
                       </Typography>
-                    }></ListItemText>
+                    }
+                  ></ListItemText>
                 </ListItem>
               );
             })}

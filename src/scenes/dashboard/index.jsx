@@ -21,7 +21,9 @@ const Dashboard = () => {
       <Box
         display={"flex"}
         justifyContent={"space-between"}
-        alignItems={"center"}>
+        alignItems={"center"}
+        minWidth="992px"
+      >
         <Header title={"DASHBOARD"} subtitle={"Welcome to your dashboard"} />
         <Box>
           <Button
@@ -32,31 +34,33 @@ const Dashboard = () => {
               fontSize: "14px",
               fontWeight: "bold",
               padding: "10px 20px",
-            }}>
+            }}
+          >
             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
             Download Reports
           </Button>
         </Box>{" "}
       </Box>
       <Box
+        minHeight={"730px"}
+        minWidth="992px"
         maxHeight={"77vh"}
         paddingRight={"20px"}
         paddingBottom="5px"
         display={"grid"}
         gridTemplateColumns={"repeat(12, 1fr)"}
         gridTemplateRows={"repeat(5, 1fr)"}
-        gap={"20px"}>
+        gap={"20px"}
+      >
         <Box
-          // sx={{
-          //   borderTopLeftRadius :  '4px'
-          // }}
           borderRadius={"4px"}
           gridColumn={"span 3"}
           gridRow={"span 1"}
           backgroundColor={colors.primary[400]}
           display={"flex"}
           alignItems={"center"}
-          justifyContent={"center"}>
+          justifyContent={"center"}
+        >
           <StatBox
             title={"12,361"}
             subtitle={"Emails sent"}
@@ -79,7 +83,8 @@ const Dashboard = () => {
           backgroundColor={colors.primary[400]}
           display={"flex"}
           alignItems={"center"}
-          justifyContent={"center"}>
+          justifyContent={"center"}
+        >
           <StatBox
             title={"431,225"}
             subtitle={"sales abtained"}
@@ -102,7 +107,8 @@ const Dashboard = () => {
           backgroundColor={colors.primary[400]}
           display={"flex"}
           alignItems={"center"}
-          justifyContent={"center"}>
+          justifyContent={"center"}
+        >
           <StatBox
             title={"32,441"}
             subtitle={"New Clients"}
@@ -125,7 +131,8 @@ const Dashboard = () => {
           backgroundColor={colors.primary[400]}
           display={"flex"}
           alignItems={"center"}
-          justifyContent={"center"}>
+          justifyContent={"center"}
+        >
           <StatBox
             title={"1,325,159"}
             subtitle={"Traffic Inbound"}
@@ -141,28 +148,33 @@ const Dashboard = () => {
             }
           />
         </Box>
+
         <Box
           borderRadius={"4px"}
           gridColumn="span 8"
           gridRow="span 2"
-          backgroundColor={colors.primary[400]}>
+          backgroundColor={colors.primary[400]}
+        >
           <Box
             mt="25px"
             p="0 30px"
             display="flex "
             justifyContent="space-between"
-            alignItems="center">
+            alignItems="center"
+          >
             <Box>
               <Typography
                 variant="h5"
                 fontWeight="600"
-                color={colors.gray[100]}>
+                color={colors.gray[100]}
+              >
                 Revenue Generated
               </Typography>
               <Typography
                 variant="h3"
                 fontWeight="bold"
-                color={colors.greenAccent[500]}>
+                color={colors.greenAccent[500]}
+              >
                 $59,342.32
               </Typography>
             </Box>
@@ -184,14 +196,16 @@ const Dashboard = () => {
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
-          overflow="auto">
+          overflow="auto"
+        >
           <Box
             display="flex"
             justifyContent="space-between"
             alignItems="center"
             borderBottom={`4px solid ${colors.primary[500]}`}
             colors={colors.gray[100]}
-            p="15px">
+            p="15px"
+          >
             <Typography color={colors.gray[100]} variant="h5" fontWeight="600">
               Recent Transactions
             </Typography>
@@ -203,12 +217,14 @@ const Dashboard = () => {
               justifyContent="space-between"
               alignItems="center"
               borderBottom={`4px solid ${colors.primary[500]}`}
-              p="15px">
+              p="15px"
+            >
               <Box>
                 <Typography
                   color={colors.greenAccent[500]}
                   variant="h5"
-                  fontWeight="600">
+                  fontWeight="600"
+                >
                   {transaction.txId}
                 </Typography>
                 <Typography color={colors.gray[100]}>
@@ -219,7 +235,8 @@ const Dashboard = () => {
               <Box
                 backgroundColor={colors.greenAccent[500]}
                 p="5px 10px"
-                borderRadius="4px">
+                borderRadius="4px"
+              >
                 ${transaction.cost}
               </Box>
             </Box>
@@ -231,7 +248,8 @@ const Dashboard = () => {
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
-          p="20px">
+          p="20px"
+        >
           <Typography variant="h5" fontWeight="600">
             Campaign
           </Typography>
@@ -239,12 +257,14 @@ const Dashboard = () => {
             display="flex"
             flexDirection="column"
             alignItems="center"
-            mt="15px">
+            mt="15px"
+          >
             <ProgressCircle size="115" />
             <Typography
               variant="h5"
               color={colors.greenAccent[500]}
-              sx={{ mt: "15px" }}>
+              sx={{ mt: "15px" }}
+            >
               $48,352 revenue generated
             </Typography>
             <Typography>Includes extra misc expenditures and costs</Typography>
@@ -254,11 +274,13 @@ const Dashboard = () => {
           borderRadius={"4px"}
           gridColumn="span 4"
           gridRow="span 2"
-          backgroundColor={colors.primary[400]}>
+          backgroundColor={colors.primary[400]}
+        >
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ padding: "30px 30px 0 30px" }}>
+            sx={{ padding: "30px 30px 0 30px" }}
+          >
             Sales Quantity
           </Typography>
           <Box height="250px" mt="-20px">
@@ -270,11 +292,13 @@ const Dashboard = () => {
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
-          padding="20px">
+          padding="20px"
+        >
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ marginBottom: "15px" }}>
+            sx={{ marginBottom: "15px" }}
+          >
             Geography Based Traffic
           </Typography>
           <Box height="200px">

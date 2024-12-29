@@ -30,7 +30,8 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
           color: colors.gray[100],
         }}
         onClick={() => setSelected(title)}
-        icon={icon}>
+        icon={icon}
+      >
         <Typography>{title}</Typography>
       </MenuItem>
     </Link>
@@ -46,6 +47,7 @@ const Sidebarr = () => {
   return (
     <Box
       sx={{
+        // height: "100%",
         "& .ps-sidebar-root": {
           border: "none",
         },
@@ -66,24 +68,28 @@ const Sidebarr = () => {
         "& .ps-active": {
           color: "#6870fa !important",
         },
-      }}>
+      }}
+    >
       <Sidebar collapsed={isCollapsed}>
         <Menu
           style={{
             height: "calc(100vh - 10px)",
             maxHeight: "100vh",
-          }}>
+          }}
+        >
           {/* LOGO AND MENU ICON */}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
-            style={{ margin: "10px 0 10px 0", color: colors.gray[200] }}>
+            style={{ margin: "10px 0 10px 0", color: colors.gray[200] }}
+          >
             {!isCollapsed && (
               <Box
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
-                ml="15px">
+                ml="15px"
+              >
                 <Typography variant="h3" color={colors.gray[100]}>
                   ADMINIS
                 </Typography>
@@ -111,7 +117,8 @@ const Sidebarr = () => {
                   variant="h2"
                   color={colors.gray[100]}
                   fontWeight="bold"
-                  sx={{ m: "10px 0 0 0" }}>
+                  sx={{ m: "10px 0 0 0" }}
+                >
                   NoorH
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
@@ -133,7 +140,8 @@ const Sidebarr = () => {
             <Typography
               variant="h6"
               color={colors.gray[300]}
-              sx={{ m: "13px 0 5px 20px" }}>
+              sx={{ m: "13px 0 5px 20px" }}
+            >
               Data
             </Typography>
             <Item
@@ -161,7 +169,8 @@ const Sidebarr = () => {
             <Typography
               variant="h6"
               color={colors.gray[300]}
-              sx={{ m: "12px 0 5px 20px" }}>
+              sx={{ m: "12px 0 5px 20px" }}
+            >
               Pages
             </Typography>
             <Item
@@ -189,7 +198,8 @@ const Sidebarr = () => {
             <Typography
               variant="h6"
               color={colors.gray[300]}
-              sx={{ m: "13px 0 5px 15px" }}>
+              sx={{ m: "13px 0 5px 15px" }}
+            >
               Charts
             </Typography>
             <Item

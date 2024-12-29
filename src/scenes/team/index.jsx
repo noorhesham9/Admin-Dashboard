@@ -51,7 +51,8 @@ const Team = () => {
                 ? colors.greenAccent[600]
                 : colors.greenAccent[700]
             }
-            borderRadius={"4px"}>
+            borderRadius={"4px"}
+          >
             {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
             {access === "manager" && <SecurityOutlinedIcon />}
             {access === "user" && <LockOpenOutlinedIcon />}
@@ -64,7 +65,7 @@ const Team = () => {
     },
   ];
   return (
-    <Box>
+    <Box minHeight={"730px"} minWidth={"992px"}>
       <Header title={"TEAM"} subtitle={"Managing the Team Memvers"} />
       <Box
         m={"40px 0 0 0"}
@@ -90,7 +91,8 @@ const Team = () => {
             borderTop: "none",
             backgroundColor: colors.blueAccent[800],
           },
-        }}>
+        }}
+      >
         <DataGrid rows={mockDataTeam} columns={columns}></DataGrid>
       </Box>
     </Box>

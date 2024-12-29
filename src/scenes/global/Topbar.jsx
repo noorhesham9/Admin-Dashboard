@@ -14,11 +14,17 @@ const Topbar = () => {
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
   return (
-    <Box display={"flex"} justifyContent={"space-between"} p={2}>
+    <Box
+      minWidth={"992px"}
+      display={"flex"}
+      justifyContent={"space-between"}
+      p={2}
+    >
       <Box
         display={"flex"}
         backgroundColor={colors.primary[400]}
-        borderRadius={"3px"}>
+        borderRadius={"3px"}
+      >
         <InputBase sx={{ ml: 2, flex: 1 }} />
         <IconButton type="button" sx={{ p: 1 }}>
           <SearchIcon />
